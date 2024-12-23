@@ -3098,6 +3098,32 @@ document.addEventListener('DOMContentLoaded', () => {
     tableWrapper.appendChild(buildingContainer);
   });
 
+  let TWPos = {left: 0, x: 0};
+
+  const mouseDownHandler = function (e) {
+    tableWrapper.style.userSelect = 'none';
+    TWPos = {
+      left: tableWrapper.scrollLeft,
+      x: e.clientX,
+    };
+    
+    tableWrapper.addEventListener('mousemove', mouseMoveHandler);
+    tableWrapper.addEventListener('mouseup', mouseUpHandler);
+  };
+
+  const mouseMoveHandler = function (e) {
+      let dx = e.clientX - TWPos.x;
+      tableWrapper.scrollLeft = TWPos.left - dx;
+  };
+
+  const mouseUpHandler = function () {
+    tableWrapper.removeEventListener('mousemove', mouseMoveHandler);
+    tableWrapper.removeEventListener('mouseup', mouseUpHandler);
+    tableWrapper.style.removeProperty('user-select');
+};
+
+  tableWrapper.addEventListener('mousedown', mouseDownHandler)
+
   closeDetailsButton.addEventListener('click', closeDetails);
 
   function closeDetails() {

@@ -81,7 +81,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		openPopUp(document.querySelector('.js-popup-callback'));
 	}, '.js-pop-up-callback-open');
 
+	myAddEventListener(document, 'click', function (el, e) {
+		openPopUp(document.querySelector('.js-popup-callback-2'));
+	}, '.js-pop-up-callback-2-open');
+
 	const openButtons = document.querySelectorAll(".js-pop-up-callback-open");
+	openButtons.forEach(button => button.addEventListener("click", openPopUp));
+	const openButtons2 = document.querySelectorAll(".js-pop-up-callback-2-open");
 	openButtons.forEach(button => button.addEventListener("click", openPopUp));
 });
 
