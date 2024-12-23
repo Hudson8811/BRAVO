@@ -2825,6 +2825,12 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", () => {
     removeActiveClasses();
   });
+
+  popUpPlan.addEventListener("click", (e) => {
+    if(e.target.closest('.popUp-plan__content') == null) {
+      removeActiveClasses();
+    }
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
