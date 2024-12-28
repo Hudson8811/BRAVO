@@ -1376,13 +1376,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateBlockPosition() {
-    const targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+    let targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+
+    let ww = window.innerWidth
+
+    if(ww < 551) {
+      if(currentIndex == blocks.length - 1) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex  + (blocksContainer.offsetWidth - blockWidth);
+      }
+    }else if(ww < 769) {
+      if(currentIndex == blocks.length - 2) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - (blockWidth + blockMarginRight) * 2 + blockMarginRight);
+      }
+    }else if(ww < 1025) {
+      if(currentIndex == blocks.length - 1) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - (blockWidth + blockMarginRight) + blockMarginRight);
+      }
+    }else if(ww < 1420) {
+      if(currentIndex == blocks.length - 2) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - (blockWidth + blockMarginRight) * 2 + blockMarginRight);
+      }
+    }
+
     animateScroll(targetOffset);
   }
 
   function updateButtonOpacity() {
+    let coef = 3
+
+    if(window.innerWidth < 1420) {
+      coef = 2
+    }
+
+    if(window.innerWidth < 1025) {
+      coef = 1
+    }
     svgPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
-    svgNext.style.opacity = currentIndex === blocks.length - 1 ? '0.5' : '1';
+    svgNext.style.opacity = currentIndex === blocks.length - coef ? '0.5' : '1';
   }
 
   btnPrev.addEventListener('click', () => {
@@ -1394,7 +1424,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnNext.addEventListener('click', () => {
-    if (currentIndex < blocks.length - 1) {
+    let coef = 3
+
+    if(window.innerWidth < 1420) {
+      coef = 2
+    }
+
+    if(window.innerWidth < 1025) {
+      coef = 1
+    }
+
+    if (currentIndex < blocks.length - coef) {
       currentIndex++;
       updateBlockPosition();
       updatePagination();
@@ -1672,14 +1712,25 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(animationStep);
   }
 
+
   function updateBlockPosition() {
-    const targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+    let targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+     
+    if(currentIndex == blocks.length - 1) {
+      targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - blockWidth);
+    }
+
     animateScroll(targetOffset);
   }
 
   function updateButtonOpacity() {
+    let coef = 2
+
+    if(window.innerWidth < 1425) {
+      coef = 1
+    }
     svgPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
-    svgNext.style.opacity = currentIndex === blocks.length - 1 ? '0.5' : '1';
+    svgNext.style.opacity = currentIndex === blocks.length - coef ? '0.5' : '1';
   }
 
   btnPrev.addEventListener('click', () => {
@@ -1690,8 +1741,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
   btnNext.addEventListener('click', () => {
-    if (currentIndex < blocks.length - 1) {
+    let coef = 2
+
+    if(window.innerWidth < 1425) {
+      coef = 1
+    }
+
+    if (currentIndex < blocks.length - coef) {
       currentIndex++;
       updateBlockPosition();
       updatePagination();
@@ -1845,13 +1903,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateBlockPosition() {
-    const targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+    let targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+
+    if(currentIndex == blocks.length - 1) {
+      targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - blockWidth);
+    }
+
     animateScroll(targetOffset);
   }
 
   function updateButtonOpacity() {
+    let coef = 2
+
+    if(window.innerWidth < 1425) {
+      coef = 1
+    }
     svgPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
-    svgNext.style.opacity = currentIndex === blocks.length - 1 ? '0.5' : '1';
+    svgNext.style.opacity = currentIndex === blocks.length - coef ? '0.5' : '1';
   }
 
   btnPrev.addEventListener('click', () => {
@@ -1863,7 +1931,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnNext.addEventListener('click', () => {
-    if (currentIndex < blocks.length - 1) {
+    let coef = 2
+
+    if(window.innerWidth < 1425) {
+      coef = 1
+    }
+    if (currentIndex < blocks.length - coef) {
       currentIndex++;
       updateBlockPosition();
       updatePagination();
@@ -1968,13 +2041,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateBlockPosition() {
-    const targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+    let targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+
+    if(currentIndex == blocks.length - 1) {
+      targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - blockWidth);
+    }
+
     animateScroll(targetOffset);
   }
 
   function updateButtonOpacity() {
+    let coef = 2
+
+    if(window.innerWidth < 1425) {
+      coef = 1
+    }
     svgPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
-    svgNext.style.opacity = currentIndex === blocks.length - 1 ? '0.5' : '1';
+    svgNext.style.opacity = currentIndex === blocks.length - coef ? '0.5' : '1';
   }
 
   btnPrev.addEventListener('click', () => {
@@ -1986,7 +2069,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnNext.addEventListener('click', () => {
-    if (currentIndex < blocks.length - 1) {
+
+    let coef = 2
+
+    if(window.innerWidth < 1425) {
+      coef = 1
+    }
+
+    if (currentIndex < blocks.length - coef) {
       currentIndex++;
       updateBlockPosition();
       updatePagination();
@@ -2236,13 +2326,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateBlockPosition() {
-    const targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+    let targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+
+    if(currentIndex == blocks.length - 1) {
+      targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - blockWidth);
+    }
     animateScroll(targetOffset);
   }
 
   function updateButtonOpacity() {
+    let coef = 2
+
+    if(window.innerWidth < 1425) {
+      coef = 1
+    }
     svgPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
-    svgNext.style.opacity = currentIndex === blocks.length - 1 ? '0.5' : '1';
+    svgNext.style.opacity = currentIndex === blocks.length - coef ? '0.5' : '1';
   }
 
   btnPrev.addEventListener('click', () => {
@@ -2254,7 +2353,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnNext.addEventListener('click', () => {
-    if (currentIndex < blocks.length - 1) {
+    let coef = 2
+
+    if(window.innerWidth < 1425) {
+      coef = 1
+    }
+    if (currentIndex < blocks.length - coef) {
       currentIndex++;
       updateBlockPosition();
       updatePagination();
@@ -2557,13 +2661,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateBlockPosition() {
-    const targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+
+    let targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+    let ww = window.innerWidth
+
+    if(ww < 551) {
+      if(currentIndex == blocks.length - 1) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex  + (blocksContainer.offsetWidth - blockWidth);
+      }
+    }else if(ww < 769) {
+      if(currentIndex == blocks.length - 2) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - (blockWidth + blockMarginRight) * 2 + blockMarginRight);
+      }
+    }else if(ww < 1380) {
+      if(currentIndex == blocks.length - 3) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - (blockWidth + blockMarginRight) * 3 + blockMarginRight);
+      }
+    }
+  
     animateScroll(targetOffset);
   }
 
   function updateButtonOpacity() {
+    let coef = 4
+
+    if(window.innerWidth < 1380) {
+      coef = 3
+    }
+
+    if(window.innerWidth < 769) {
+      coef = 1
+    }
     svgPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
-    svgNext.style.opacity = currentIndex === blocks.length - 1 ? '0.5' : '1';
+    svgNext.style.opacity = currentIndex === blocks.length - coef ? '0.5' : '1';
   }
 
   btnPrev.addEventListener('click', () => {
@@ -2575,7 +2705,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnNext.addEventListener('click', () => {
-    if (currentIndex < blocks.length - 1) {
+    let coef = 4
+
+    if(window.innerWidth < 1380) {
+      coef = 3
+    }
+
+    if(window.innerWidth < 769) {
+      coef = 1
+    }
+
+    if (currentIndex < blocks.length - coef) {
       currentIndex++;
       updateBlockPosition();
       updatePagination();
@@ -3238,13 +3378,46 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateBlockPosition() {
-    const targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+    let targetOffset = -(blockWidth + blockMarginRight) * currentIndex;
+    let coef = 3
+
+    if(window.innerWidth < 1380) {
+      if(currentIndex == blocks.length - coef) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - (blockWidth + blockMarginRight) * coef + blockMarginRight);
+      }
+    }
+
+    if(window.innerWidth < 769) {
+      coef = 2
+      if(currentIndex == blocks.length - coef) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - (blockWidth + blockMarginRight) * coef + blockMarginRight);
+      }
+    }
+    
+    if(window.innerWidth < 551) {
+      coef = 1
+      if(currentIndex == blocks.length - coef) {
+        targetOffset = -(blockWidth + blockMarginRight) * currentIndex + (blocksContainer.offsetWidth - blockWidth);
+      }
+    }
+
+
     animateScroll(targetOffset);
   }
 
   function updateButtonOpacity() {
+    let coef = 4
+
+    if(window.innerWidth < 1380) {
+      coef = 3
+    }
+
+    if(window.innerWidth < 769) {
+      coef = 1
+    }
+
     svgPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
-    svgNext.style.opacity = currentIndex === blocks.length - 1 ? '0.5' : '1';
+    svgNext.style.opacity = currentIndex === blocks.length - coef ? '0.5' : '1';
   }
 
   btnPrev.addEventListener('click', () => {
@@ -3256,7 +3429,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnNext.addEventListener('click', () => {
-    if (currentIndex < blocks.length - 1) {
+
+    let coef = 4
+
+    if(window.innerWidth < 1380) {
+      coef = 3
+    }
+
+    if(window.innerWidth < 769) {
+      coef = 1
+    }
+
+    if (currentIndex < blocks.length - coef) {
       currentIndex++;
       updateBlockPosition();
       updatePagination();
