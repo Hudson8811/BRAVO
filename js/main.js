@@ -3593,6 +3593,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateVisibility();
 });
-
-
-
