@@ -6374,7 +6374,7 @@ button {
 
 .apartmentProgram-table__content .fixed-floor-numbers .floor-label:nth-child(1) {
     position: absolute;
-    bottom: 41.6px
+    bottom: 40px
 }
 
 .apartmentProgram-table__content .fixed-floor-numbers .floor {
@@ -6421,13 +6421,18 @@ button {
 }
 
 .apartmentProgram-table__content .table-wrapper .building-table {
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(16, 50px);
     gap: 9px;
     -webkit-column-gap: 13px;
     -moz-column-gap: 13px;
-    column-gap: 13px;
+    column-gap: 13px;*/
     margin: 0 auto
+}
+
+.apartmentProgram-table__content .table-wrapper .building-table-row{
+    margin-bottom: 9px;
+    display:flex;
 }
 
 .apartmentProgram-table__content .table-wrapper .cell {
@@ -6446,8 +6451,12 @@ button {
     width: 54px;
     height: 54px;
     border-radius: 5px;
-    cursor: pointer;
+
     transition: all .5s ease
+}
+
+.apartmentProgram-table__content .table-wrapper .cell+.cell{
+    margin-left: 9px;
 }
 
 .apartmentProgram-table__content .table-wrapper .cell:hover {
@@ -6524,7 +6533,8 @@ button {
 }
 
 .apartmentProgram-table__content .table-wrapper .cell.green {
-    background-color: #31b86a
+    background-color: #31b86a;
+    cursor: pointer;
 }
 
 .apartmentProgram-table__content .table-wrapper .cell.green .tooltip-top__type {
@@ -6532,7 +6542,8 @@ button {
 }
 
 .apartmentProgram-table__content .table-wrapper .cell.yellow {
-    background-color: #fed400
+    background-color: #fed400;
+    cursor: pointer;
 }
 
 .apartmentProgram-table__content .table-wrapper .cell.yellow .tooltip-top__type {
@@ -10350,7 +10361,7 @@ button {
     }
 
     .apartmentProgram-table__content .fixed-floor-numbers .floor-label:nth-child(1) {
-        bottom: 33.5px
+        bottom: 32px
     }
 
     .apartmentProgram-table__content .fixed-floor-numbers .floor {
@@ -10368,7 +10379,7 @@ button {
     }
 
     .apartmentProgram-table__content .table-wrapper .building-title {
-        margin-top: 8px;
+        margin-top: 9px;
         margin-bottom: 20px;
         font-size: 12px
     }

@@ -3119,7 +3119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fixedFloorNumbersRight.appendChild(floorRight);
   }
 
-  // Генерация зданий
+  /* Генерация зданий
   const buildings = [...new Set(data.map(d => d.building))];
   buildings.forEach(building => {
     const buildingData = data.filter(d => d.building === building);
@@ -3236,7 +3236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buildingContainer.appendChild(titleTypeBottom);
 
     tableWrapper.appendChild(buildingContainer);
-  });
+  });*/
 
   let TWPos = {left: 0, x: 0};
 
