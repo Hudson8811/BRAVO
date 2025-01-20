@@ -4260,6 +4260,19 @@ button {
     z-index: -1
 }
 
+.residentialComplex-generalPlan__content-facilities__item:nth-child(7) {
+    top: 186px;
+    left: 875px
+}
+
+.residentialComplex-generalPlan__content-facilities__item:nth-child(7) .residentialComplex-generalPlan__content-facilities__svg {
+    top: -33px;
+    left: -40px;
+    width: 169px;
+    height: 111px;
+    z-index: -1
+}
+
 .residentialComplex-generalPlan__content-cards {
     position: absolute;
     bottom: 36px;

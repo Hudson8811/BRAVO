@@ -2488,6 +2488,23 @@
             }
           }
         }
+
+        &:nth-child(7) {
+          top: 378px;
+          left: 418px;
+
+          &.active {
+
+            &::before {
+              top: -33.5px;
+              left: -40px;
+              width: 222.5px;
+              height: 138px;
+              background-image: url(../img/apartmens/generalPlan/home-12.svg);
+              z-index: -1;
+            }
+          }
+        }
       }
 
     }
