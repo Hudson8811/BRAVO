@@ -4183,11 +4183,24 @@ button {
 }
 
 .residentialComplex-generalPlan__content-facilities__item:nth-child(1) {
+    top: 186px;
+    left: 875px
+}
+
+.residentialComplex-generalPlan__content-facilities__item:nth-child(1) .residentialComplex-generalPlan__content-facilities__svg {
+    top: -33px;
+    left: -40px;
+    width: 169px;
+    height: 111px;
+    z-index: -1
+}
+
+.residentialComplex-generalPlan__content-facilities__item:nth-child(2) {
     top: 130px;
     left: 729px
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(1) .residentialComplex-generalPlan__content-facilities__svg {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(2) .residentialComplex-generalPlan__content-facilities__svg {
     top: -19px;
     left: -58px;
     width: 188px;
@@ -4195,12 +4208,12 @@ button {
     z-index: -1
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(2) {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(3) {
     top: 251px;
     left: 734px
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(2) .residentialComplex-generalPlan__content-facilities__svg {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(3) .residentialComplex-generalPlan__content-facilities__svg {
     top: -36px;
     left: -84px;
     width: 217.5px;
@@ -4208,12 +4221,12 @@ button {
     z-index: -1
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(3) {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(4) {
     top: 187px;
     left: 593px
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(3) .residentialComplex-generalPlan__content-facilities__svg {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(4) .residentialComplex-generalPlan__content-facilities__svg {
     top: -34px;
     left: -70px;
     width: 166.5px;
@@ -4221,12 +4234,12 @@ button {
     z-index: -1
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(4) {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(5) {
     top: 317px;
     left: 577px
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(4) .residentialComplex-generalPlan__content-facilities__svg {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(5) .residentialComplex-generalPlan__content-facilities__svg {
     top: -48px;
     left: -78px;
     width: 210px;
@@ -4234,12 +4247,12 @@ button {
     z-index: -1
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(5) {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(6) {
     top: 243px;
     left: 444px
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(5) .residentialComplex-generalPlan__content-facilities__svg {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(6) .residentialComplex-generalPlan__content-facilities__svg {
     top: -38px;
     left: -66px;
     width: 190px;
@@ -4247,12 +4260,12 @@ button {
     z-index: -1
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(6) {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(7) {
     top: 378px;
     left: 418px
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(6) .residentialComplex-generalPlan__content-facilities__svg {
+.residentialComplex-generalPlan__content-facilities__item:nth-child(7) .residentialComplex-generalPlan__content-facilities__svg {
     top: -55px;
     left: -84px;
     width: 222.5px;
@@ -4260,18 +4273,7 @@ button {
     z-index: -1
 }
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(7) {
-    top: 186px;
-    left: 875px
-}
 
-.residentialComplex-generalPlan__content-facilities__item:nth-child(7) .residentialComplex-generalPlan__content-facilities__svg {
-    top: -33px;
-    left: -40px;
-    width: 169px;
-    height: 111px;
-    z-index: -1
-}
 
 .residentialComplex-generalPlan__content-cards {
     position: absolute;
@@ -9238,75 +9240,87 @@ button {
     }
 
     .residentialComplex-generalPlan__content-facilities__item:nth-child(1) {
-        top: 95px;
-        left: 534px
+        top: 130px;
+        left: 625px
     }
 
-    .residentialComplex-generalPlan__content-facilities__item:nth-child(1).active::before {
-        top: -15px;
-        left: -46px;
-        width: 138px;
-        height: 63px
+    .residentialComplex-generalPlan__content-facilities__item:nth-child(1) .residentialComplex-generalPlan__content-facilities__svg{
+        top: -25px;
+        left: -25px;
+        width: 120px;
+        height: 90px;
     }
 
     .residentialComplex-generalPlan__content-facilities__item:nth-child(2) {
-        top: 182px;
-        left: 533px
+        top: 95px;
+        left: 516px
     }
 
-    .residentialComplex-generalPlan__content-facilities__item:nth-child(2).active::before {
-        top: -26px;
-        left: -59px;
-        width: 158.5px;
-        height: 112px
+    .residentialComplex-generalPlan__content-facilities__item:nth-child(2) .residentialComplex-generalPlan__content-facilities__svg{
+        top: -15px;
+        left: -32px;
+        width: 135px;
+        height: 55px;
     }
 
     .residentialComplex-generalPlan__content-facilities__item:nth-child(3) {
-        top: 136px;
-        left: 432px
+        top: 175px;
+        left: 511px
     }
 
-    .residentialComplex-generalPlan__content-facilities__item:nth-child(3).active::before {
-        top: -25px;
-        left: -51px;
-        width: 122.5px;
-        height: 102.5px
+    .residentialComplex-generalPlan__content-facilities__item:nth-child(3) .residentialComplex-generalPlan__content-facilities__svg{
+        top: -20px;
+        left: -43px;
+        width: 158px;
+        height: 80px;
     }
 
     .residentialComplex-generalPlan__content-facilities__item:nth-child(4) {
-        top: 230px;
-        left: 419px
+        top: 131px;
+        left: 407px
     }
 
-    .residentialComplex-generalPlan__content-facilities__item:nth-child(4).active::before {
-        top: -33px;
-        left: -55px;
-        width: 154px;
-        height: 112px
+    .residentialComplex-generalPlan__content-facilities__item:nth-child(4) .residentialComplex-generalPlan__content-facilities__svg{
+        top: -20px;
+        left: -28px;
+        width: 120px;
+        height: 74px;
     }
 
     .residentialComplex-generalPlan__content-facilities__item:nth-child(5) {
-        top: 176px;
-        left: 322px
+        top: 218px;
+        left: 395px
     }
 
-    .residentialComplex-generalPlan__content-facilities__item:nth-child(5).active::before {
-        top: -27px;
-        left: -45px;
-        width: 139px;
-        height: 105px
+    .residentialComplex-generalPlan__content-facilities__item:nth-child(5) .residentialComplex-generalPlan__content-facilities__svg{
+        top: -25px;
+        left: -35px;
+        width: 150px;
+        height: 87px;
     }
 
     .residentialComplex-generalPlan__content-facilities__item:nth-child(6) {
-        top: 274px;
-        left: 304px
+        top: 169px;
+        left: 308px
     }
 
-    .residentialComplex-generalPlan__content-facilities__item:nth-child(6).active::before {
-        top: -37px;
-        left: -60px;
-        width: 161.5px;
-        height: 138px
+    .residentialComplex-generalPlan__content-facilities__item:nth-child(6) .residentialComplex-generalPlan__content-facilities__svg{
+        top: -20px;
+        left: -35px;
+        width: 137px;
+        height: 74px;
+    }
+
+    .residentialComplex-generalPlan__content-facilities__item:nth-child(7) {
+        top: 265px;
+        left: 282px;
+    }
+
+    .residentialComplex-generalPlan__content-facilities__item:nth-child(7) .residentialComplex-generalPlan__content-facilities__svg{
+        top: -32px;
+        left: -40px;
+        width: 157px;
+        height: 99px;
     }
 
     .residentialComplex-generalPlan__content-cards {
